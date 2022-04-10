@@ -1,6 +1,4 @@
-# <center> Natural Language Processing </center>
-![image](https://user-images.githubusercontent.com/81012989/162632188-c59c935e-d407-4ba2-9fed-3f99a0282d0a.png)
-
+# Natural Language Processing
 Natural language processing (NLP) is a widely discussed and studied subject these days. 
 NLP, one of the oldest areas of machine learning research, is used in major fields such as machine translation speech recognition and word processing. 
 As part of this repository, I have implemented few projects on Natural Language Processing using **Python** and **Machine Learning**.
