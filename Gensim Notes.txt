@@ -1,0 +1,20 @@
+Gensim Notes
+
+# Removing the stop words
+from gensim.parsing.preprocessing import remove_stopwords
+print(remove_stopwords("Restaurant had a really good service!!"))
+print(remove_stopwords("I did not like the food!!"))
+print(remove_stopwords("This product is not good!!"))
+
+
+from gensim.utils import simple_preprocess
+# Tokenize the text column to get the new column 'tokenized_text'
+top_data_df_small['tokenized_text'] = [simple_preprocess(line, deacc=True) for line in top_data_df_small['text']] 
+print(top_data_df_small['tokenized_text'].head(10))
+
+
+from gensim.parsing.porter import PorterStemmer
+porter_stemmer = PorterStemmer()
+# Get the stemmed_tokens
+top_data_df_small['stemmed_tokens'] = [[porter_stemmer.stem(word) for word in tokens] for tokens in top_data_df_small['tokenized_text'] ]
+top_data_df_small['stemmed_tokens'].head(10)
